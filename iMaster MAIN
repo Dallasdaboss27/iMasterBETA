@@ -10,9 +10,7 @@
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>iMaster by MaxMobileYT
-
-(Use at your own Risk!) (Data Rates may apply) (Can crash device due to high CPU usage, recommended for IOS 13)</string>
+				<string>iMaster by MaxMobileYT</string>
 			</dict>
 		</dict>
 		<dict>
@@ -80,7 +78,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>5.1.3</string>
+										<string>5.2</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -105,7 +103,7 @@
 				<key>WFTextActionText</key>
 				<string>RoutineHubUpdate
 
-Current Version: "5.1.3"
+Current Version: "5.2"
 RoutineHub ID: "6178"
 
 RoutineHubUpdate</string>
@@ -131,10 +129,10 @@ RoutineHubUpdate</string>
 				<key>UUID</key>
 				<string>73D3088F-1D94-446E-97C4-10FA424CB101</string>
 				<key>WFTextActionText</key>
-				<string>I realized one of the Updaters (AutoUpdate) are not working properly due to a bug I can't fix currently. I will try to fix it later. For now, here are the new changes:
+				<string>I Haven't had the chance to fix the Embed AutoUpdate, i might have to wait until they fix the Embedding Shortcut! I did add a few cool features though, check them out!
 
-• Fixed Settings File Detection Bug
-• Removed AutoUpdate (Temporarily)</string>
+• Rebuilt Music Utilities
+• Added Custom URL for Ping Test</string>
 			</dict>
 		</dict>
 		<dict>
@@ -167,6 +165,86 @@ RoutineHubUpdate</string>
 				</dict>
 				<key>WFVariableName</key>
 				<string>Version</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getdevicedetails</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>EC766ED0-2C15-4AD0-8C07-1E284C5F94EC</string>
+				<key>WFDeviceDetail</key>
+				<string>Device Is Watch</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>CBBA2FFB-0B5E-499C-B5D7-EE9180F23E1D</string>
+				<key>WFCondition</key>
+				<integer>4</integer>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>OutputName</key>
+							<string>Device Is Watch</string>
+							<key>OutputUUID</key>
+							<string>EC766ED0-2C15-4AD0-8C07-1E284C5F94EC</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.alert</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFAlertActionCancelButtonShown</key>
+				<false/>
+				<key>WFAlertActionMessage</key>
+				<string>Your device is not compatible with iMaster! You will be redirected to the Apple Watch Version!</string>
+				<key>WFAlertActionTitle</key>
+				<string>Apple Watch not Compatible!</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.openurl</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>Show-WFInput</key>
+				<true/>
+				<key>WFInput</key>
+				<string>https://routinehub.co/shortcut/6443</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>CBBA2FFB-0B5E-499C-B5D7-EE9180F23E1D</string>
+				<key>UUID</key>
+				<string>00F35CD9-C8FE-45B0-A275-9821A57168A9</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -355,6 +433,8 @@ RoutineHubUpdate</string>
 			<string>is.workflow.actions.documentpicker.save</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>UUID</key>
+				<string>3C5DBA14-2C78-4302-ACA7-85AA25C46E30</string>
 				<key>WFAskWhereToSave</key>
 				<false/>
 				<key>WFFileDestinationPath</key>
@@ -2703,7 +2783,7 @@ RoutineHubUpdate</string>
 								<key>VariableName</key>
 								<string>networkStats</string>
 							</dict>
-							<key>{34, 1}</key>
+							<key>{35, 1}</key>
 							<dict>
 								<key>OutputName</key>
 								<string>City</string>
@@ -2712,7 +2792,7 @@ RoutineHubUpdate</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 							</dict>
-							<key>{37, 1}</key>
+							<key>{38, 1}</key>
 							<dict>
 								<key>OutputName</key>
 								<string>Temperature</string>
@@ -2741,7 +2821,7 @@ RoutineHubUpdate</string>
 							</dict>
 						</dict>
 						<key>string</key>
-						<string>iMaster v￼ Made by MaxMobileYT ￼| ￼: ￼</string>
+						<string>iMaster v￼ Made by MaxMobileYT ￼ | ￼: ￼</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenString</string>
@@ -3097,7 +3177,7 @@ RoutineHubUpdate</string>
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>ShortcurVersion</string>
+										<string>ShortcutVersion</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -3560,19 +3640,6 @@ System Info: ￼</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.ask</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>8DE42D20-88DB-4ED4-A76D-2C02C082875C</string>
-				<key>WFAskActionPrompt</key>
-				<string>When do you want to spam the Message?</string>
-				<key>WFInputType</key>
-				<string>Date and Time</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.alert</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -3582,78 +3649,6 @@ System Info: ￼</string>
 				<string>Do you understand that iMaster or the owner is not liable for any lawsuits, and may contain glitches.</string>
 				<key>WFAlertActionTitle</key>
 				<string>Consent</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.gettimebetweendates</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>0E4BE3DC-D1E8-4F4B-9F99-3762728AF04F</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>attachmentsByRange</key>
-						<dict>
-							<key>{0, 1}</key>
-							<dict>
-								<key>OutputName</key>
-								<string>Provided Input</string>
-								<key>OutputUUID</key>
-								<string>8DE42D20-88DB-4ED4-A76D-2C02C082875C</string>
-								<key>Type</key>
-								<string>ActionOutput</string>
-							</dict>
-						</dict>
-						<key>string</key>
-						<string>￼</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenString</string>
-				</dict>
-				<key>WFTimeUntilFromDate</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>attachmentsByRange</key>
-						<dict>
-							<key>{0, 1}</key>
-							<dict>
-								<key>Type</key>
-								<string>CurrentDate</string>
-							</dict>
-						</dict>
-						<key>string</key>
-						<string>￼</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenString</string>
-				</dict>
-				<key>WFTimeUntilUnit</key>
-				<string>Seconds</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.delay</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFDelayTime</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Time Between Dates</string>
-						<key>OutputUUID</key>
-						<string>0E4BE3DC-D1E8-4F4B-9F99-3762728AF04F</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
 			</dict>
 		</dict>
 		<dict>
@@ -3837,7 +3832,7 @@ System Info: ￼</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFAlertActionMessage</key>
-				<string>TeleMaster or the owner is not liable for any lawsuits, and may contain glitches.</string>
+				<string>iMaster or the owner is not liable for any lawsuits, and may contain glitches. Also, when the message sends, it will not show it on your screen. Click Ok to Continue, Click Cancel to Cancel the message.</string>
 			</dict>
 		</dict>
 		<dict>
@@ -5325,488 +5320,29 @@ System Info: ￼</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>GroupingIdentifier</key>
-				<string>28FCBB73-8E48-4E9C-8378-541B392F2912</string>
+				<string>DCE43C5A-EE68-404F-BB50-78ADE5BF80E3</string>
 				<key>WFControlFlowMode</key>
 				<integer>0</integer>
 				<key>WFMenuItems</key>
 				<array>
-					<string>👨‍🎤 Get Artist 👨‍🎤</string>
-					<string>🔤 Get Lyrics 🔤</string>
-					<string>🎙 Get Song with Mic 🎙</string>
-					<string>⏎  Back to Main Menu</string>
+					<string>Shazam It!</string>
 				</array>
 				<key>WFMenuPrompt</key>
-				<string>Song Master</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>28FCBB73-8E48-4E9C-8378-541B392F2912</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>👨‍🎤 Get Artist 👨‍🎤</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>4BC55A4C-8CB3-4189-A4CA-1EA6E96EE704</string>
-				<key>WFControlFlowMode</key>
-				<integer>0</integer>
-				<key>WFMenuItems</key>
-				<array>
-					<string>With Mic</string>
-					<string>With Current Playing</string>
-					<string>⏎  Back to Main Menu</string>
-				</array>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>4BC55A4C-8CB3-4189-A4CA-1EA6E96EE704</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>With Mic</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.shazamMedia</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>8ACC2EC2-1D2E-45B1-ABA9-32D0ACDDCB66</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.properties.music</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Shazam Media</string>
-						<key>OutputUUID</key>
-						<string>8ACC2EC2-1D2E-45B1-ABA9-32D0ACDDCB66</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>4BC55A4C-8CB3-4189-A4CA-1EA6E96EE704</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>With Current Playing</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.getcurrentsong</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>B9238B02-B962-45F0-8068-85EAC7329D1E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.properties.music</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>160A9F35-C54E-46A8-9B1F-0A7BCFCE948B</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Current Song</string>
-						<key>OutputUUID</key>
-						<string>B9238B02-B962-45F0-8068-85EAC7329D1E</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>4BC55A4C-8CB3-4189-A4CA-1EA6E96EE704</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>⏎  Back to Main Menu</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.runworkflow</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>EED238A7-EBE2-4513-9F01-5E5653DBD720</string>
-				<key>WFShowWorkflow</key>
-				<false/>
-				<key>WFWorkflow</key>
-				<dict>
-					<key>isSelf</key>
-					<false/>
-					<key>workflowName</key>
-					<string>iMaster</string>
-				</dict>
-				<key>WFWorkflowName</key>
-				<string>iMaster</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>4BC55A4C-8CB3-4189-A4CA-1EA6E96EE704</string>
-				<key>UUID</key>
-				<string>197D217C-0871-48E0-8CA4-D74FE82D0FE5</string>
-				<key>WFControlFlowMode</key>
-				<integer>2</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>28FCBB73-8E48-4E9C-8378-541B392F2912</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>🔤 Get Lyrics 🔤</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>E37CE77E-8CDC-474D-AD7A-CC37FD1475D4</string>
-				<key>WFControlFlowMode</key>
-				<integer>0</integer>
-				<key>WFMenuItems</key>
-				<array>
-					<string>From Mic</string>
-					<string>From Current Playing</string>
-					<string>⏎  Back to Main Menu</string>
-				</array>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>E37CE77E-8CDC-474D-AD7A-CC37FD1475D4</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>From Mic</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.shazamMedia</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>F18F3D6A-773E-4E2F-A838-3DFD98E7CB85</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.properties.music</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFContentItemPropertyName</key>
-				<string>Lyrics</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Shazam Media</string>
-						<key>OutputUUID</key>
-						<string>F18F3D6A-773E-4E2F-A838-3DFD98E7CB85</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>E37CE77E-8CDC-474D-AD7A-CC37FD1475D4</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>From Current Playing</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.getcurrentsong</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>0F4B664D-C3FD-470B-AEDD-FA41D94FE3BF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.properties.music</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>1440DD30-7C34-425C-BB61-D897F4C9E401</string>
-				<key>WFContentItemPropertyName</key>
-				<string>Lyrics</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Current Song</string>
-						<key>OutputUUID</key>
-						<string>0F4B664D-C3FD-470B-AEDD-FA41D94FE3BF</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>E37CE77E-8CDC-474D-AD7A-CC37FD1475D4</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>⏎  Back to Main Menu</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.runworkflow</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFShowWorkflow</key>
-				<false/>
-				<key>WFWorkflow</key>
-				<dict>
-					<key>isSelf</key>
-					<false/>
-					<key>workflowName</key>
-					<string>iMaster</string>
-				</dict>
-				<key>WFWorkflowName</key>
-				<string>iMaster</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>E37CE77E-8CDC-474D-AD7A-CC37FD1475D4</string>
-				<key>UUID</key>
-				<string>EB3DD8A2-7A35-4C46-9065-51619BE6DC62</string>
-				<key>WFControlFlowMode</key>
-				<integer>2</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>28FCBB73-8E48-4E9C-8378-541B392F2912</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>🎙 Get Song with Mic 🎙</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.shazamMedia</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>A96A521B-A0DD-4449-8EFF-05687218F60A</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.properties.music</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>85AD6CE8-D465-40EB-BDCA-3300A4CD0D28</string>
-				<key>WFContentItemPropertyName</key>
-				<string>Title</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Shazam Media</string>
-						<key>OutputUUID</key>
-						<string>A96A521B-A0DD-4449-8EFF-05687218F60A</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.properties.music</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>FABBA875-F321-4CF9-AD4E-77FB4375B4C7</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Shazam Media</string>
-						<key>OutputUUID</key>
-						<string>A96A521B-A0DD-4449-8EFF-05687218F60A</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.properties.music</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>F56E2209-1C44-4DE1-BD6A-52430C73BC3D</string>
-				<key>WFContentItemPropertyName</key>
-				<string>Album</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Shazam Media</string>
-						<key>OutputUUID</key>
-						<string>A96A521B-A0DD-4449-8EFF-05687218F60A</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.showresult</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>Text</key>
 				<dict>
 					<key>Value</key>
 					<dict>
 						<key>attachmentsByRange</key>
 						<dict>
-							<key>{20, 1}</key>
+							<key>{0, 1}</key>
 							<dict>
-								<key>OutputName</key>
-								<string>Title</string>
-								<key>OutputUUID</key>
-								<string>85AD6CE8-D465-40EB-BDCA-3300A4CD0D28</string>
 								<key>Type</key>
-								<string>ActionOutput</string>
-							</dict>
-							<key>{49, 1}</key>
-							<dict>
-								<key>OutputName</key>
-								<string>Artist</string>
-								<key>OutputUUID</key>
-								<string>F56E2209-1C44-4DE1-BD6A-52430C73BC3D</string>
-								<key>Type</key>
-								<string>ActionOutput</string>
-							</dict>
-							<key>{77, 1}</key>
-							<dict>
-								<key>OutputName</key>
-								<string>Artist</string>
-								<key>OutputUUID</key>
-								<string>F56E2209-1C44-4DE1-BD6A-52430C73BC3D</string>
-								<key>Type</key>
-								<string>ActionOutput</string>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Prompt</string>
 							</dict>
 						</dict>
 						<key>string</key>
-						<string>The song is called: ￼
-The artist of the song is: ￼
-The album of the song is: ￼</string>
+						<string>￼</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenString</string>
@@ -5815,43 +5351,51 @@ The album of the song is: ￼</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.list</string>
+			<string>is.workflow.actions.choosefrommenu</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
-				<key>CustomOutputName</key>
-				<string>YesNo</string>
-				<key>UUID</key>
-				<string>88AEE4FE-BEE3-440C-82A0-F3EFCDA22F24</string>
-				<key>WFItems</key>
-				<array>
-					<string>Yes</string>
-					<string>No</string>
-				</array>
+				<key>GroupingIdentifier</key>
+				<string>DCE43C5A-EE68-404F-BB50-78ADE5BF80E3</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+				<key>WFMenuItemTitle</key>
+				<string>Shazam It!</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefromlist</string>
+			<string>is.workflow.actions.shazamMedia</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>UUID</key>
-				<string>53B9911A-B7E0-4A43-A3BA-106F8A20347E</string>
-				<key>WFChooseFromListActionPrompt</key>
-				<string>Would you like to add the song to your Apple Music Library?</string>
+				<string>380E6151-18C5-4F4A-8CB9-83B092C8E2A3</string>
+				<key>WFShazamMediaActionErrorIfNotRecognized</key>
+				<true/>
+				<key>WFShazamMediaActionShowWhenRun</key>
+				<true/>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
 				<key>WFInput</key>
 				<dict>
 					<key>Value</key>
 					<dict>
 						<key>OutputName</key>
-						<string>YesNo</string>
+						<string>Shazam Media</string>
 						<key>OutputUUID</key>
-						<string>88AEE4FE-BEE3-440C-82A0-F3EFCDA22F24</string>
+						<string>380E6151-18C5-4F4A-8CB9-83B092C8E2A3</string>
 						<key>Type</key>
 						<string>ActionOutput</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
 				</dict>
+				<key>WFVariableName</key>
+				<string>Shazam</string>
 			</dict>
 		</dict>
 		<dict>
@@ -5860,11 +5404,9 @@ The album of the song is: ￼</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>GroupingIdentifier</key>
-				<string>F4AFE01E-94A3-4DA9-8A75-2EFEE7F94480</string>
+				<string>33BCAFEC-11BB-4A52-80D3-FC1E84C9A43C</string>
 				<key>WFCondition</key>
-				<integer>4</integer>
-				<key>WFConditionalActionString</key>
-				<string>Yes</string>
+				<integer>100</integer>
 				<key>WFControlFlowMode</key>
 				<integer>0</integer>
 				<key>WFInput</key>
@@ -5876,9 +5418,9 @@ The album of the song is: ￼</string>
 						<key>Value</key>
 						<dict>
 							<key>OutputName</key>
-							<string>Chosen Item</string>
+							<string>Shazam Media</string>
 							<key>OutputUUID</key>
-							<string>53B9911A-B7E0-4A43-A3BA-106F8A20347E</string>
+							<string>380E6151-18C5-4F4A-8CB9-83B092C8E2A3</string>
 							<key>Type</key>
 							<string>ActionOutput</string>
 						</dict>
@@ -5890,21 +5432,176 @@ The album of the song is: ￼</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.addtoplaylist</string>
+			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
+				<key>CustomOutputName</key>
+				<string>Shazam Prompt</string>
 				<key>UUID</key>
-				<string>7FC2AEAC-9B96-452A-971A-D3D573E55BA4</string>
+				<string>3FE11E97-EBC4-4559-A868-DE85CE12B752</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{16, 1}</key>
+							<dict>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>PropertyName</key>
+										<string>Artist</string>
+										<key>Type</key>
+										<string>WFPropertyVariableAggrandizement</string>
+									</dict>
+								</array>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Shazam</string>
+							</dict>
+							<key>{28, 1}</key>
+							<dict>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>PropertyName</key>
+										<string>Is Explicit</string>
+										<key>Type</key>
+										<string>WFPropertyVariableAggrandizement</string>
+									</dict>
+								</array>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Shazam</string>
+							</dict>
+							<key>{6, 1}</key>
+							<dict>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>PropertyName</key>
+										<string>Title</string>
+										<key>Type</key>
+										<string>WFPropertyVariableAggrandizement</string>
+									</dict>
+								</array>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Shazam</string>
+							</dict>
+							<key>{65, 1}</key>
+							<dict>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>PropertyName</key>
+										<string>Lyrics Snippet</string>
+										<key>Type</key>
+										<string>WFPropertyVariableAggrandizement</string>
+									</dict>
+								</array>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Shazam</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>Song: ￼
+Artist: ￼
+Explicit: ￼
+
+________________
+
+Snippet Lyrics: ￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefrommenu</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>1E23F3D9-6658-41BD-B356-D72EB28206E1</string>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFMenuItems</key>
+				<array>
+					<string>Open in Shazam</string>
+					<string>Add to Apple Music</string>
+					<string>Watch Music Video</string>
+					<string>Save Album Artwork</string>
+					<string>Shazam Again</string>
+				</array>
+				<key>WFMenuPrompt</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Shazam Prompt</string>
+								<key>OutputUUID</key>
+								<string>3FE11E97-EBC4-4559-A868-DE85CE12B752</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefrommenu</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>1E23F3D9-6658-41BD-B356-D72EB28206E1</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+				<key>WFMenuItemTitle</key>
+				<string>Open in Shazam</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.openurl</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>Show-WFInput</key>
+				<true/>
 				<key>WFInput</key>
 				<dict>
 					<key>Value</key>
 					<dict>
-						<key>OutputName</key>
-						<string>Title</string>
-						<key>OutputUUID</key>
-						<string>85AD6CE8-D465-40EB-BDCA-3300A4CD0D28</string>
+						<key>Aggrandizements</key>
+						<array>
+							<dict>
+								<key>PropertyName</key>
+								<string>Shazam URL</string>
+								<key>Type</key>
+								<string>WFPropertyVariableAggrandizement</string>
+							</dict>
+						</array>
 						<key>Type</key>
-						<string>ActionOutput</string>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Shazam</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
@@ -5913,13 +5610,144 @@ The album of the song is: ￼</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.conditional</string>
+			<string>is.workflow.actions.choosefrommenu</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>GroupingIdentifier</key>
-				<string>F4AFE01E-94A3-4DA9-8A75-2EFEE7F94480</string>
+				<string>1E23F3D9-6658-41BD-B356-D72EB28206E1</string>
 				<key>WFControlFlowMode</key>
 				<integer>1</integer>
+				<key>WFMenuItemTitle</key>
+				<string>Add to Apple Music</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.addtoplaylist</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Shazam</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefrommenu</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>1E23F3D9-6658-41BD-B356-D72EB28206E1</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+				<key>WFMenuItemTitle</key>
+				<string>Watch Music Video</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.openurl</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>Show-WFInput</key>
+				<true/>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Aggrandizements</key>
+						<array>
+							<dict>
+								<key>PropertyName</key>
+								<string>Video URL</string>
+								<key>Type</key>
+								<string>WFPropertyVariableAggrandizement</string>
+							</dict>
+						</array>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Shazam</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefrommenu</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>1E23F3D9-6658-41BD-B356-D72EB28206E1</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+				<key>WFMenuItemTitle</key>
+				<string>Save Album Artwork</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.savetocameraroll</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Aggrandizements</key>
+						<array>
+							<dict>
+								<key>PropertyName</key>
+								<string>Artwork</string>
+								<key>Type</key>
+								<string>WFPropertyVariableAggrandizement</string>
+							</dict>
+						</array>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Shazam</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefrommenu</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>1E23F3D9-6658-41BD-B356-D72EB28206E1</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+				<key>WFMenuItemTitle</key>
+				<string>Shazam Again</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefrommenu</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>1E23F3D9-6658-41BD-B356-D72EB28206E1</string>
+				<key>UUID</key>
+				<string>7C62E5EE-ADBB-4029-9714-93597B18A1B9</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -5928,9 +5756,7 @@ The album of the song is: ￼</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>GroupingIdentifier</key>
-				<string>F4AFE01E-94A3-4DA9-8A75-2EFEE7F94480</string>
-				<key>UUID</key>
-				<string>C6BE45EF-FDBF-415B-A1A7-3CC752E992E2</string>
+				<string>33BCAFEC-11BB-4A52-80D3-FC1E84C9A43C</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -5941,40 +5767,7 @@ The album of the song is: ￼</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>GroupingIdentifier</key>
-				<string>28FCBB73-8E48-4E9C-8378-541B392F2912</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-				<key>WFMenuItemTitle</key>
-				<string>⏎  Back to Main Menu</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.runworkflow</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFShowWorkflow</key>
-				<false/>
-				<key>WFWorkflow</key>
-				<dict>
-					<key>isSelf</key>
-					<false/>
-					<key>workflowName</key>
-					<string>iMaster</string>
-				</dict>
-				<key>WFWorkflowName</key>
-				<string>iMaster</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>28FCBB73-8E48-4E9C-8378-541B392F2912</string>
-				<key>UUID</key>
-				<string>CA6095AA-D0BA-4910-AC5B-033651045C40</string>
+				<string>DCE43C5A-EE68-404F-BB50-78ADE5BF80E3</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
 			</dict>
@@ -6148,37 +5941,6 @@ The album of the song is: ￼</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.showwebpage</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFEnterSafariReader</key>
-				<true/>
-				<key>WFURL</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>attachmentsByRange</key>
-						<dict>
-							<key>{0, 1}</key>
-							<dict>
-								<key>OutputName</key>
-								<string>State</string>
-								<key>OutputUUID</key>
-								<string>E5794273-ADD8-4EA6-A136-F7C9FA6A8B65</string>
-								<key>Type</key>
-								<string>ActionOutput</string>
-							</dict>
-						</dict>
-						<key>string</key>
-						<string>￼.gov</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenString</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.choosefrommenu</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -6193,6 +5955,32 @@ The album of the song is: ￼</string>
 					<string>Fun &amp; Games</string>
 					<string>Grocery Stores</string>
 					<string>Attractions</string>
+					<dict>
+						<key>WFItemType</key>
+						<integer>0</integer>
+						<key>WFValue</key>
+						<dict>
+							<key>Value</key>
+							<dict>
+								<key>attachmentsByRange</key>
+								<dict>
+									<key>{6, 1}</key>
+									<dict>
+										<key>OutputName</key>
+										<string>State</string>
+										<key>OutputUUID</key>
+										<string>E5794273-ADD8-4EA6-A136-F7C9FA6A8B65</string>
+										<key>Type</key>
+										<string>ActionOutput</string>
+									</dict>
+								</dict>
+								<key>string</key>
+								<string>Go to ￼.gov</string>
+							</dict>
+							<key>WFSerializationType</key>
+							<string>WFTextTokenString</string>
+						</dict>
+					</dict>
 				</array>
 				<key>WFMenuPrompt</key>
 				<string>Tourist Master</string>
@@ -6802,6 +6590,92 @@ The album of the song is: ￼</string>
 						<string>Chosen Item</string>
 						<key>OutputUUID</key>
 						<string>4245BA20-250B-4E25-9D5F-3591608D6D2E</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefrommenu</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>EF08A743-9FA5-4230-BCFD-FA1E2D467329</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+				<key>WFMenuItemAttributedTitle</key>
+				<dict>
+					<key>attachmentsByRange</key>
+					<dict>
+						<key>{6, 1}</key>
+						<dict>
+							<key>OutputName</key>
+							<string>State</string>
+							<key>OutputUUID</key>
+							<string>E5794273-ADD8-4EA6-A136-F7C9FA6A8B65</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+						</dict>
+					</dict>
+					<key>string</key>
+					<string>Go to ￼.gov</string>
+				</dict>
+				<key>WFMenuItemTitle</key>
+				<string>Go to State.gov</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.url</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>CustomOutputName</key>
+				<string>State.gov</string>
+				<key>UUID</key>
+				<string>4BE1BAEC-37D6-4143-9D56-23D92B087FCB</string>
+				<key>WFURLActionURL</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>State</string>
+								<key>OutputUUID</key>
+								<string>E5794273-ADD8-4EA6-A136-F7C9FA6A8B65</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼.gov</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.openurl</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>Show-WFInput</key>
+				<true/>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>State.gov</string>
+						<key>OutputUUID</key>
+						<string>4BE1BAEC-37D6-4143-9D56-23D92B087FCB</string>
 						<key>Type</key>
 						<string>ActionOutput</string>
 					</dict>
@@ -7633,6 +7507,25 @@ IP Address: ￼</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.ask</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>CustomOutputName</key>
+				<string>PingedURL</string>
+				<key>UUID</key>
+				<string>88F0B695-C609-4B69-A2F5-F10619462956</string>
+				<key>WFAskActionDefaultAnswer</key>
+				<string>http://www.google.com</string>
+				<key>WFAskActionDefaultAnswerURL</key>
+				<string>http://www.google.com</string>
+				<key>WFAskActionPrompt</key>
+				<string>What is the URL you would like to Ping? (Default shows fastest!)</string>
+				<key>WFInputType</key>
+				<string>URL</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.repeat.count</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -7678,17 +7571,6 @@ IP Address: ￼</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.gettext</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>D292BB8E-8DAF-4FE0-944C-E3F55D518D5F</string>
-				<key>WFTextActionText</key>
-				<string>http://google.com</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.url.getheaders</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -7702,10 +7584,19 @@ IP Address: ￼</string>
 						<dict>
 							<key>{0, 1}</key>
 							<dict>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>CoercionItemClass</key>
+										<string>WFURLContentItem</string>
+										<key>Type</key>
+										<string>WFCoercionVariableAggrandizement</string>
+									</dict>
+								</array>
 								<key>OutputName</key>
-								<string>Text</string>
+								<string>PingedURL</string>
 								<key>OutputUUID</key>
-								<string>D292BB8E-8DAF-4FE0-944C-E3F55D518D5F</string>
+								<string>88F0B695-C609-4B69-A2F5-F10619462956</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 							</dict>
